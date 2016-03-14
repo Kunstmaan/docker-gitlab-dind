@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+    gitlab-dind:
+        image: kunstmaan/gitlab-dind
+        build: ./
+        stdin_open: true
+        tty: true
