@@ -8,4 +8,4 @@ branch = sys.argv[4]
 
 slack = Slacker(token)
 
-slack.chat.post_message(channel, 'Check out updated branch ' + branch + 'at http://' + slug + '.docker.kunstmaan.com')
+slack.chat.post_message(channel, 'Check out updated branch ' + branch + ' at http://' + slug + '.docker.kunstmaan.com')
