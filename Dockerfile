@@ -3,7 +3,8 @@ FROM gitlab/dind
 RUN apt-get update && \
     apt-get upgrade -q -y && \
     apt-get dist-upgrade -q -y && \
-    apt-get -q -y install python-yaml python-pip && \
+    apt-get -q -y install python-yaml python-pip libffi-dev libssl-dev && \
+    pip install requests[security] && \
     pip install slacker && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
