@@ -3,9 +3,8 @@ from slacker import Slacker
 
 token = sys.argv[1]
 channel = sys.argv[2]
-slug = sys.argv[3]
-branch = sys.argv[4]
+message = sys.argv[3]
 
 slack = Slacker(token)
 
-slack.chat.post_message(channel, 'Check out updated branch ' + branch + ' at http://' + slug + '.docker.kunstmaan.com')
+slack.chat.post_message(channel, message)
