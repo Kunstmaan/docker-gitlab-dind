@@ -19,4 +19,7 @@ RUN apt-get update && \
     rm -Rf rancher-compose-v0.7.4 && \
     rancher-compose --version
 
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
+    apt-get install -y nodejs
+
 ADD ./slack.py /root/slack.py
